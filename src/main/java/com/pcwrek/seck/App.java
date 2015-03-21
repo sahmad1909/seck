@@ -3,6 +3,7 @@ package com.pcwrek.seck;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -149,18 +150,36 @@ public class App {
 				"------------ Processing took %s millis\n\n",
 				System.currentTimeMillis() - start));
 	}
+	
+	
+	public static double formatDecimal(Double value){		
+		if(value!=null){
+			
+			DecimalFormat newFormat = new DecimalFormat("#.#####");
+			return Double.valueOf(newFormat.format(value));
+		}
+		
+		return 0.0;
+	}
 
 	public static void main(String[] args) throws Exception {
-
-		String path = "C:\\temp\\resource\\4a036bf2-2acc-48f2-a155-760c5860fff4.gif";
-
-		Tika tika = new Tika();
-
-		System.out.println("File Type : " + tika.detect(path));
 		
-		Parser parser = new AutoDetectParser();
+		Double d = 2.1E-7;
 		
-		extractFromFile(parser,path);
+//		DecimalFormat newFormat = new DecimalFormat("#.#####");
+//		double twoDecimal =  ;
+		
+		System.out.println(formatDecimal(d));
+
+//		String path = "C:\\temp\\resource\\4a036bf2-2acc-48f2-a155-760c5860fff4.gif";
+//
+//		Tika tika = new Tika();
+//
+//		System.out.println("File Type : " + tika.detect(path));
+//		
+//		Parser parser = new AutoDetectParser();
+//		
+//		extractFromFile(parser,path);
 
 	
 

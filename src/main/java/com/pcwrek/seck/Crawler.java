@@ -148,7 +148,7 @@ public class Crawler {
 					
 					i ++;
 					
-					if(i==10){
+					if(i==40){
 						break;
 					}
 			}
@@ -171,10 +171,10 @@ public class Crawler {
 		
 		System.out.println(" Non Demo Mode");
 
-		 if (!URL.contains(rootURL)) {
+		// if (!URL.contains(rootURL)) {
 		currentValue++;
 //		 System.out.println("Current Depth : " + currentValue);
-		 }
+//		 }
 
 		if (urlList != null && !urlList.isEmpty())
 			if (currentValue < depth) {
@@ -466,5 +466,47 @@ public class Crawler {
 		}
 		return fileName;
 	}
+	
+	/**
+	 *  {
+lastupdate:10-Feb-2001
+title:CS454
+pagedata:page data
+resources:[
+           
+                {
+		     newname:uuid.pdf
+		     atext: click on it.
+		     url:http://www.calstatela.edu/one.pdf
+
+		}
+          
+          ]
+images:[
+	  {
+		newname:uuid.gif
+		atext:click image
+		url:www.calstatela.edu/la.gif
+	  }
+
+       ]
+
+links:[
+	{
+		atext:one link
+		url:onlink.html
+ 	},
+	{
+	        atext:second link
+		url:secondllink.html
+	}
+
+      ]
+
+}
+	 *  
+	 *  
+	 *  
+	 */
 
 }
