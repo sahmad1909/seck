@@ -172,6 +172,7 @@ public class PageRank {
 
 	
 	
+	@SuppressWarnings("unchecked")
 	public static void mergeRankingandWriteIntoFile(String filePath) throws IOException{
 		
 		/**
@@ -255,6 +256,7 @@ public class PageRank {
 	/**
 	 * 
 	 */
+	@SuppressWarnings("unchecked")
 	public static void createTFIDFRank() {
 
 		// TF = word count / total word
@@ -313,6 +315,7 @@ public class PageRank {
 
 		String[] wordsArray = document.split(" ");
 
+		@SuppressWarnings("unused")
 		Integer totalWords = wordsArray.length;
 
 		for (String token : wordsArray) {
@@ -373,6 +376,7 @@ public class PageRank {
 	 * 
 	 * @param page
 	 */
+	@SuppressWarnings("unused")
 	public static void pageRankingOfThisPage(String page) {
 
 		// P rank = PC / link count
@@ -463,6 +467,7 @@ public class PageRank {
 	 * @param filePath
 	 * @throws IOException
 	 */
+	@SuppressWarnings("unchecked")
 	public static void writeInexJsonFile(String filePath) throws IOException {
 		JSONArray jsonWordArray = new JSONArray();
 
@@ -511,6 +516,7 @@ public class PageRank {
 	 * @param JSONArray1
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	public static String readResoruceArray(JSONArray jSONArray,
 			JSONArray JSONArray1) {
 
@@ -654,6 +660,7 @@ public class PageRank {
 	 * @param pageString
 	 * @return
 	 */
+	@SuppressWarnings("resource")
 	public static String removeStopWords(String pageString) {
 
 		String withoutStopString = "";

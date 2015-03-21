@@ -82,6 +82,7 @@ public class Extractor {
 	 * @return
 	 * @throws Exception
 	 */
+	@SuppressWarnings("unchecked")
 	public static Map<String, String> extractFileMetadata(String filePath,
 			JSONObject jsonObject) {
 

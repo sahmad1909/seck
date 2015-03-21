@@ -85,6 +85,7 @@ public class Crawler {
 	/**
 	 * 
 	 */
+	@SuppressWarnings("unchecked")
 	public static void storeData(String filePath) throws Exception {
 
 		JSONArray urlJsonArray = new JSONArray();
@@ -261,6 +262,7 @@ public class Crawler {
 	 * @return
 	 * @throws Exception
 	 */
+	@SuppressWarnings({ "resource", "unchecked" })
 	public static JSONObject getURLJson(Document document, String url,String date) throws Exception{
 		
 		JSONObject urlJSON = new JSONObject();	
@@ -297,6 +299,7 @@ public class Crawler {
 	 * @return
 	 * @throws Exception
 	 */
+	@SuppressWarnings("unchecked")
 	public static JSONArray getResources(Document document) throws Exception {
 		
 		JSONArray jSONArray = new JSONArray();
@@ -338,6 +341,7 @@ public class Crawler {
 	 * @return
 	 * @throws Exception
 	 */
+	@SuppressWarnings("unchecked")
 	public static JSONArray getAcnhorTextandURL(Document document)
 			throws Exception {
 
@@ -363,6 +367,7 @@ public class Crawler {
 	 * @return
 	 * @throws Exception
 	 */
+	@SuppressWarnings("unchecked")
 	public static JSONArray getImages(Document document)
 			throws Exception {
 		

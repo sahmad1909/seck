@@ -186,6 +186,7 @@ public class CrawlerExtractor {
 	 * 
 	 * @throws Exception
 	 */
+	@SuppressWarnings("unchecked")
 	public static void storeData(String filePath) throws Exception {
 
 		// Map<String,Map<String,Object>> urlData = new
@@ -364,6 +365,7 @@ public class CrawlerExtractor {
 
 		if (pageString != null) {
 
+			@SuppressWarnings("resource")
 			Scanner scanner = new Scanner(pageString);
 
 			while (scanner.hasNext()) {
